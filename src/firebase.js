@@ -1,6 +1,8 @@
 // Import the functions you need from the SDKs you need
 import firebase from "firebase";
 import "firebase/auth"
+import "firebase/firestore"
+import "firebase/storage"
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -19,3 +21,14 @@ const app = firebase.initializeApp(firebaseConfig);
 export const googleAuth=new firebase.auth.GoogleAuthProvider();
 export default firebase;
 export const auth=firebase.auth();
+
+const firestore=firebase.firestore();
+
+//database
+export const database={
+  users:firestore.collection('user'),
+  getCurrentTimeStamp:firebase.firestore.FieldValue.serverTimestamp
+}
+
+//storeage
+export const storage=firebase.storage(); 

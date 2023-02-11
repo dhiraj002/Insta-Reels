@@ -10,6 +10,7 @@ function Login() {
         try{
             let userCred= await auth.signInWithEmailAndPassword(email,password)
             console.log(userCred.user);
+            alert("User logged In")
 
         }catch(err){
                 alert(err.message);
