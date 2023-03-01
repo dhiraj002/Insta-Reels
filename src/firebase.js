@@ -7,7 +7,7 @@ import "firebase/storage"
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
-const firebaseConfig = {
+export const firebaseConfig = {
   apiKey: "AIzaSyAHqMMCaOMvpos_qk9D_SC4dP9Ls6J7HMg",
   authDomain: "instareels-df91a.firebaseapp.com",
   projectId: "instareels-df91a",
@@ -26,7 +26,7 @@ const firestore=firebase.firestore();
 
 //database
 export const database={
-  users:firestore.collection('user'),
+  users:firestore.collection('users'),
   getCurrentTimeStamp:firebase.firestore.FieldValue.serverTimestamp
 }
 

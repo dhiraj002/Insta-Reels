@@ -42,7 +42,7 @@ function SignUp() {
             createdAt:database.getCurrentTimeStamp(),
             profileImageLink:imgUrl
           })
-          
+           
         }
       
       }catch(err){
